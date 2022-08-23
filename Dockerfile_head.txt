@@ -8,4 +8,4 @@ RUN apt-get update && apt-get install -y git
 # Allow statements and log messages to immediately appear in the Knative logs
 ENV PYTHONUNBUFFERED True
 
-# Environment variables (set from `.env_dockerfile.toml`)
+# Secret environment variables (set from `.secrets.toml`)

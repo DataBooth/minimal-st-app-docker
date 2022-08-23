@@ -4,6 +4,7 @@
 .env_dockerfile.toml
 .vscode
 !.vscode/launch.json
+.secrets.toml
 
 
 # Byte-compiled / optimized / DLL files
