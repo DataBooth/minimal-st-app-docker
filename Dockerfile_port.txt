@@ -1,0 +1,2 @@
+# Expose the port the web app is exposed on
+EXPOSE {{SERVER_PORT}}

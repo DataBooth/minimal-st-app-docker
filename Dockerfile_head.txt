@@ -1,0 +1,11 @@
+# See: https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service
+
+# Also: https://cloud.google.com/run/docs/deploying-source-code
+
+FROM python:{{PYTHON_VERSION}}-slim-bullseye
+RUN apt-get update && apt-get install -y git
+
+# Allow statements and log messages to immediately appear in the Knative logs
+ENV PYTHONUNBUFFERED True
+
+# Environment variables (set from `.env_dockerfile.toml`)

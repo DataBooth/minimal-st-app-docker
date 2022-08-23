@@ -1,0 +1,15 @@
+# TODO: Create a venv & don't be root to improve security
+# See https://stackoverflow.com/questions/68673221/warning-running-pip-as-the-root-user
+# for enhancements to Dockerfile e.g. not running as root & in venv
+
+# Setup venv
+
+ENV PY_VIRTUAL_ENV={{PY_VIRTUAL_ENV}}
+RUN python3 -m venv $PY_VIRTUAL_ENV
+ENV PATH="$PY_VIRTUAL_ENV/bin:$PATH"
+
+# Python requirements install
+
+RUN pip install --upgrade pip
+COPY requirements-deploy.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
