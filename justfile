@@ -15,6 +15,9 @@ docs:
 port-process port:
 	sudo lsof -i :$SERVER_PORT
 
+nbconvert-md notebook:
+	jupyter nbconvert --to markdown {{notebook}} --output-dir='docs/nbconvert'
+
 
 # Create the local Python venv (.venv_$PROJECT_NAME) and install requirements(.txt)
 

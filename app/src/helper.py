@@ -10,7 +10,6 @@ def read_markdown_file(markdown_file):
     try:
         return Path(markdown_file).read_text()
     except Exception as IOError:
-        sys_list.append(f"Error with markdown file: {markdown_file}")
         raise(IOError)
 
 
