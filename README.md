@@ -1,3 +1,3 @@
-# `st-data-app-template`
+# `titanic`
 
-Template for creating, developing and deploying Streamlit data apps to Google Cloud Run (GCR).
+Titanic example of Streamlit app from `st-data-app-template`
