@@ -39,8 +39,8 @@ def create_dockerfile_with_env_vars(python_version="3.10", env_file=".env_docker
                             # Looking for {{TEXT}} to replace
                             k = f"{{{{{k}}}}}"
                             replaced, text = replace_string_in_file(k, v, text)
-                            if replaced:
-                                print(f"\nReplaced: {k} with {v} in section {section}")
+                            # if replaced:
+                                # print(f"\nReplaced: {k} with {v} in section {section}")
                         fout.writelines(text)
                         fout.write("\n")
             except Exception as IOError:
@@ -49,7 +49,7 @@ def create_dockerfile_with_env_vars(python_version="3.10", env_file=".env_docker
             with open(Path(dockerfile), "a") as fout:
                 for k, v in secrets_dict.items():
                     # all secrets from .secrets.toml are written as ENV variables
-                    print(f"\nSecret: ENV {k}={v}")
+                    # print(f"\nSecret: ENV {k}={v}")
                     fout.writelines(f"ENV {k}={v}\n")
                 fout.write("\n")
 
