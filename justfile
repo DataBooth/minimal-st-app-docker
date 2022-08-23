@@ -89,17 +89,17 @@ docker: dockerfile
 
 gcr-setup:
     #!/usr/bin/env bash
-    gcloud components update --quiet
+    gcloud components update  
     # TODO: Check if project already exists
-    gcloud projects create $PROJECT_NAME --quiet
-    gcloud beta billing projects link $PROJECT_NAME --billing-account $BILLING_ACCOUNT_GCP --quiet
-    gcloud services enable run.googleapis.com --quiet
-    gcloud services enable compute.googleapis.com --quiet
-    gcloud services enable cloudbuild.googleapis.com --quiet
-    gcloud services enable artifactregistry.googleapis.com --quiet
-    gcloud config set project $PROJECT_NAME --quiet
-    # gcloud config set region $GCP_REGION --quiet
-    gcloud config set compute/zone $GCP_REGION --quiet
+    gcloud projects create $PROJECT_NAME  
+    gcloud beta billing projects link $PROJECT_NAME --billing-account $BILLING_ACCOUNT_GCP  
+    gcloud services enable run.googleapis.com  
+    gcloud services enable compute.googleapis.com  
+    gcloud services enable cloudbuild.googleapis.com  
+    gcloud services enable artifactregistry.googleapis.com  
+    gcloud config set project $PROJECT_NAME  
+    # gcloud config set region $GCP_REGION  
+    gcloud config set compute/zone $GCP_REGION  
 
 # check_project_exists := `gcloud projects describe $PROJECT_NAME | grep name | awk {'print $2'}`
 # check_eq := `{{check_project_exists}} == $PROJECT_NAME`
@@ -120,7 +120,7 @@ gcr-deploy: dockerfile
 	--source . $PROJECT_NAME \
 	--region $GCP_REGION \
 	--allow-unauthenticated \
-	--quiet
+	 
 	
 	end=`date +%s`
 	runtime=$((end-start))

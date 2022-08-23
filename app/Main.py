@@ -31,7 +31,7 @@ def test_env_variable():
     except Exception:
         # TODO: This is not a great solution (see config.py for files that are loaded). Have to hard code the env variable name
         st.info("Running locally the environment variable is not available using value from `.env_dockerfile.toml`")
-        test_env_var = settings.SECRET_API_KEY
+        test_env_var = settings.API_KEY
     st.markdown(f"Test environment variable: `{ENV_VAR} = {test_env_var}`")
 
 
