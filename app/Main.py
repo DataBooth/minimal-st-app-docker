@@ -1,6 +1,5 @@
 # Main.py -- for creating a basic multi-page Streamlit app
 
-from cgi import test
 import os
 from pathlib import Path
 
@@ -14,14 +13,16 @@ from src.sidebar import create_sidebar_main
 
 APP_TITLE = settings.APP_TITLE
 SUB_TITLE = settings.SUB_TITLE
+APP_ABOUT = settings.APP_ABOUT
+
 
 st.set_page_config(
     page_title=APP_TITLE,
     layout="wide",
     menu_items={
-        "About":
-        "Created with love & care at DataBooth - www.databooth.com.au"
+        "About": APP_ABOUT
     })
+
 
 def test_env_variable():
     ENV_VAR = "API_KEY"
