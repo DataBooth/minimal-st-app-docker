@@ -11,3 +11,4 @@ sklearn
 streamlit
 streamlit-pandas-profiling
 watchdog
+sklearn-pandas

@@ -211,6 +211,7 @@ numpy==1.23.2
     #   scikit-learn
     #   scipy
     #   seaborn
+    #   sklearn-pandas
     #   streamlit
     #   visions
 packaging==21.3
@@ -227,6 +228,7 @@ pandas==1.4.3
     #   pandas-profiling
     #   phik
     #   seaborn
+    #   sklearn-pandas
     #   streamlit
     #   visions
 pandas-profiling==3.2.0
@@ -320,7 +322,9 @@ rfc3986[idna2008]==1.5.0
 rich==12.5.1
     # via streamlit
 scikit-learn==1.1.2
-    # via sklearn
+    # via
+    #   sklearn
+    #   sklearn-pandas
 scipy==1.9.0
     # via
     #   imagehash
@@ -329,6 +333,7 @@ scipy==1.9.0
     #   phik
     #   scikit-learn
     #   seaborn
+    #   sklearn-pandas
 seaborn==0.11.2
     # via
     #   missingno
@@ -345,6 +350,8 @@ six==1.16.0
     #   imagehash
     #   python-dateutil
 sklearn==0.0
+    # via -r requirements-dev.in
+sklearn-pandas==2.2.0
     # via -r requirements-dev.in
 smmap==5.0.0
     # via gitdb
