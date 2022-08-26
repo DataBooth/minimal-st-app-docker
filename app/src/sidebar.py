@@ -9,37 +9,34 @@ def list_diff(list1, list2):
 def create_sidebar_main(df: pd.DataFrame, target="Survived"):
     st.sidebar.subheader("Column (Feature) selection:")
 
-    all_features = list(df.columns)
-    all_features.remove(target)  # remove the target variable from the list of features
+    feat_all = list(df.columns)
+    feat_all.remove(target)    # remove target variable from features
 
-    features_selected = all_features
-    if "features_selected" not in st.session_state:
-        st.session_state.features_selected = features_selected
-    else:
-        features_selected = st.session_state.features_selected
+    try:
+        st.code(st.session_state.feat_select)
+        st.code(st.session_state.feat_discard)
+    except:
+        pass
 
-    features_discarded = None
-    if "features_discarded" not in st.session_state:
-        st.session_state.features_discarded = features_discarded
-    else:
-        features_discarded = st.session_state.features_discarded
+    # Initialise state variables for selected & discard features
 
-    features_selected = st.sidebar.multiselect(label="Include columns (features):", 
-        options=features_selected, default=features_selected)
+    if "feat_select" not in st.session_state:
+        feat_select = feat_all
+        st.session_state.feat_select = feat_select
 
-    st.session_state.features_selected = features_selected
+    if "feat_discard" not in st.session_state:
+        feat_discard = None
+        st.session_state.feat_discard = feat_discard
 
-    features_discarded = list_diff(all_features, features_selected)
-    st.session_state.features_discarded = features_discarded
+    st.session_state.feat_select = st.sidebar.multiselect(label="Include columns (feat):",
+            options=st.session_state.feat_select, default=st.session_state.feat_select)
 
-    features_discarded = st.sidebar.multiselect(label="Discarded columns (features):", 
-        options=features_discarded, default=features_discarded)
+    st.session_state.feat_discard = list_diff(feat_all, st.session_state.feat_select)
+    
+    st.session_state.feat_discard = st.sidebar.multiselect(label="Discard columns (feat):",
+            options=st.session_state.feat_discard, default=st.session_state.feat_discard)
 
-    st.session_state.features_discarded = features_discarded
-    features_selected = list_diff(all_features, features_discarded)
-
-    st.session_state.features_selected = features_selected
-    return features_selected
+    st.session_state.feat_select = list_diff(feat_all, st.session_state.feat_discard)
 
 
 def create_sidebar_utilities():
