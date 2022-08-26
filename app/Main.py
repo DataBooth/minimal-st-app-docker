@@ -2,6 +2,7 @@
 
 import os
 from pathlib import Path
+import pandas as pd
 
 import streamlit as st
 
@@ -24,6 +25,14 @@ st.set_page_config(
     })
 
 
+@st.cache
+def load_data():
+    data_url = "https://raw.githubusercontent.com/Mjboothaus/titanic/main/data"
+    titanic_train = pd.read_csv(f"{data_url}/train.csv")
+    titanic_test= pd.read_csv(f"{data_url}/test.csv")
+    return titanic_train, titanic_test
+
+
 def test_env_variable():
     ENV_VAR = "API_KEY"
     try:
@@ -43,7 +52,10 @@ def create_app_header(app_title, subtitle=None):
 
 
 create_app_header(APP_TITLE, SUB_TITLE)
-create_sidebar_main()
+
+train_df, test_df = load_data()
+
+create_sidebar_main(train_df)
 
 
 render_markdown_file(Path.cwd()/"docs/Main.md")

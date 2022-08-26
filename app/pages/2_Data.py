@@ -7,12 +7,7 @@ from streamlit_pandas_profiling import st_profile_report
 import pandas_profiling
 
 
-@st.cache
-def load_data():
-    data_url = "https://raw.githubusercontent.com/Mjboothaus/titanic/main/data"
-    titanic_training = pd.read_csv(f"{data_url}/train.csv")
-    titanic_test= pd.read_csv(f"{data_url}/test.csv")
-    return titanic_training, titanic_test
+
 
 
 def create_data_profile(df):
