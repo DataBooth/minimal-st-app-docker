@@ -8,7 +8,8 @@ import streamlit as st
 
 from config import settings
 from src.helper import render_markdown_file
-from src.sidebar import create_sidebar_main
+from src.sidebar import create_sidebar
+from src.datasource import load_data
 
 # from helper_functions import read_render_markdown_file
 
@@ -23,14 +24,6 @@ st.set_page_config(
     menu_items={
         "About": APP_ABOUT
     })
-
-
-@st.cache
-def load_data():
-    data_url = "https://raw.githubusercontent.com/Mjboothaus/titanic/main/data"
-    titanic_train = pd.read_csv(f"{data_url}/train.csv")
-    titanic_test= pd.read_csv(f"{data_url}/test.csv")
-    return titanic_train, titanic_test
 
 
 def test_env_variable():
@@ -55,8 +48,7 @@ create_app_header(APP_TITLE, SUB_TITLE)
 
 train_df, test_df = load_data()
 
-create_sidebar_main(train_df)
-
+create_sidebar(train_df.columns)
 
 render_markdown_file(Path.cwd()/"docs/Main.md")
 
