@@ -16,7 +16,7 @@ def create_data_profile(df):
 train, test = load_data()
 create_sidebar(train.columns)
 
-tab1, tab2, tab3, tab4 = st.tabs(["Data", "Profiling", "Exploration", "Governance"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Data", "Profiling", "Exploration", "Expectations", "Governance"])
 
 with tab1:
     st.markdown(train.info())
@@ -37,4 +37,8 @@ with tab3:
 
 
 with tab4: 
+    render_markdown_file(Path.cwd()/"docs/data_expectations.md")
+
+
+with tab5: 
     render_markdown_file(Path.cwd()/"docs/data_governance.md")
