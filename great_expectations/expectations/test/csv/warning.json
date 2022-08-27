@@ -1,13 +1,12 @@
 {
   "data_asset_type": null,
-  "expectation_suite_name": "train.csv.warning",
+  "expectation_suite_name": "test.csv.warning",
   "expectations": [
     {
       "expectation_type": "expect_table_columns_to_match_ordered_list",
       "kwargs": {
         "column_list": [
           "PassengerId",
-          "Survived",
           "Pclass",
           "Name",
           "Sex",
@@ -25,148 +24,8 @@
     {
       "expectation_type": "expect_table_row_count_to_be_between",
       "kwargs": {
-        "max_value": 891,
-        "min_value": 891
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_min_to_be_between",
-      "kwargs": {
-        "column": "Survived",
-        "max_value": 0,
-        "min_value": 0
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_max_to_be_between",
-      "kwargs": {
-        "column": "Survived",
-        "max_value": 1,
-        "min_value": 1
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_mean_to_be_between",
-      "kwargs": {
-        "column": "Survived",
-        "max_value": 0.3838383838383838,
-        "min_value": 0.3838383838383838
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_median_to_be_between",
-      "kwargs": {
-        "column": "Survived",
-        "max_value": 0.0,
-        "min_value": 0.0
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_quantile_values_to_be_between",
-      "kwargs": {
-        "allow_relative_error": "lower",
-        "column": "Survived",
-        "quantile_ranges": {
-          "quantiles": [
-            0.05,
-            0.25,
-            0.5,
-            0.75,
-            0.95
-          ],
-          "value_ranges": [
-            [
-              0,
-              0
-            ],
-            [
-              0,
-              0
-            ],
-            [
-              0,
-              0
-            ],
-            [
-              1,
-              1
-            ],
-            [
-              1,
-              1
-            ]
-          ]
-        }
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_values_to_be_in_set",
-      "kwargs": {
-        "column": "Survived",
-        "value_set": [
-          0,
-          1
-        ]
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_values_to_not_be_null",
-      "kwargs": {
-        "column": "Survived"
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
-      "kwargs": {
-        "column": "Survived",
-        "max_value": 0.002244668911335578,
-        "min_value": 0.002244668911335578
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_values_to_be_in_type_list",
-      "kwargs": {
-        "column": "Survived",
-        "type_list": [
-          "INTEGER",
-          "integer",
-          "int",
-          "int_",
-          "int8",
-          "int16",
-          "int32",
-          "int64",
-          "uint8",
-          "uint16",
-          "uint32",
-          "uint64",
-          "Int8Dtype",
-          "Int16Dtype",
-          "Int32Dtype",
-          "Int64Dtype",
-          "UInt8Dtype",
-          "UInt16Dtype",
-          "UInt32Dtype",
-          "UInt64Dtype",
-          "INT",
-          "INTEGER",
-          "INT64",
-          "TINYINT",
-          "BYTEINT",
-          "SMALLINT",
-          "BIGINT",
-          "IntegerType",
-          "LongType"
-        ]
+        "max_value": 418,
+        "min_value": 418
       },
       "meta": {}
     },
@@ -192,8 +51,8 @@
       "expectation_type": "expect_column_mean_to_be_between",
       "kwargs": {
         "column": "Pclass",
-        "max_value": 2.308641975308642,
-        "min_value": 2.308641975308642
+        "max_value": 2.2655502392344498,
+        "min_value": 2.2655502392344498
       },
       "meta": {}
     },
@@ -225,8 +84,8 @@
               1
             ],
             [
-              2,
-              2
+              1,
+              1
             ],
             [
               3,
@@ -268,8 +127,8 @@
       "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
       "kwargs": {
         "column": "Pclass",
-        "max_value": 0.003367003367003367,
-        "min_value": 0.003367003367003367
+        "max_value": 0.007177033492822967,
+        "min_value": 0.007177033492822967
       },
       "meta": {}
     },
@@ -370,8 +229,8 @@
       "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
       "kwargs": {
         "column": "Sex",
-        "max_value": 0.002244668911335578,
-        "min_value": 0.002244668911335578
+        "max_value": 0.004784688995215311,
+        "min_value": 0.004784688995215311
       },
       "meta": {}
     },
@@ -400,8 +259,8 @@
       "expectation_type": "expect_column_min_to_be_between",
       "kwargs": {
         "column": "Age",
-        "max_value": 0.5,
-        "min_value": 0.0
+        "max_value": 0.17,
+        "min_value": 0.17
       },
       "meta": {}
     },
@@ -409,8 +268,8 @@
       "expectation_type": "expect_column_max_to_be_between",
       "kwargs": {
         "column": "Age",
-        "max_value": 65.0,
-        "min_value": 60.0
+        "max_value": 76.0,
+        "min_value": 76.0
       },
       "meta": {}
     },
@@ -418,8 +277,8 @@
       "expectation_type": "expect_column_mean_to_be_between",
       "kwargs": {
         "column": "Age",
-        "max_value": 29.69911764705882,
-        "min_value": 29.69911764705882
+        "max_value": 30.272590361445783,
+        "min_value": 30.272590361445783
       },
       "meta": {}
     },
@@ -427,8 +286,8 @@
       "expectation_type": "expect_column_median_to_be_between",
       "kwargs": {
         "column": "Age",
-        "max_value": 28.0,
-        "min_value": 28.0
+        "max_value": 27.0,
+        "min_value": 27.0
       },
       "meta": {}
     },
@@ -447,24 +306,24 @@
           ],
           "value_ranges": [
             [
-              4.0,
-              4.0
+              8.0,
+              8.0
             ],
             [
-              20.0,
-              20.0
+              21.0,
+              21.0
             ],
             [
-              28.0,
-              28.0
+              27.0,
+              27.0
             ],
             [
-              38.0,
-              38.0
+              39.0,
+              39.0
             ],
             [
-              56.0,
-              56.0
+              57.0,
+              57.0
             ]
           ]
         }
@@ -475,7 +334,7 @@
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "Age",
-        "mostly": 0.9
+        "mostly": 0.79
       },
       "meta": {}
     },
@@ -483,8 +342,8 @@
       "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
       "kwargs": {
         "column": "Age",
-        "max_value": 0.12324929971988796,
-        "min_value": 0.12324929971988796
+        "max_value": 0.23795180722891565,
+        "min_value": 0.23795180722891565
       },
       "meta": {}
     },
@@ -536,8 +395,8 @@
       "expectation_type": "expect_column_mean_to_be_between",
       "kwargs": {
         "column": "SibSp",
-        "max_value": 0.5230078563411896,
-        "min_value": 0.5230078563411896
+        "max_value": 0.4473684210526316,
+        "min_value": 0.4473684210526316
       },
       "meta": {}
     },
@@ -581,8 +440,8 @@
               1
             ],
             [
-              3,
-              3
+              2,
+              2
             ]
           ]
         }
@@ -616,8 +475,8 @@
       "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
       "kwargs": {
         "column": "SibSp",
-        "max_value": 0.007856341189674524,
-        "min_value": 0.007856341189674524
+        "max_value": 0.01674641148325359,
+        "min_value": 0.01674641148325359
       },
       "meta": {}
     },
@@ -672,8 +531,8 @@
       "expectation_type": "expect_column_max_to_be_between",
       "kwargs": {
         "column": "Parch",
-        "max_value": 6,
-        "min_value": 6
+        "max_value": 9,
+        "min_value": 9
       },
       "meta": {}
     },
@@ -681,8 +540,8 @@
       "expectation_type": "expect_column_mean_to_be_between",
       "kwargs": {
         "column": "Parch",
-        "max_value": 0.38159371492704824,
-        "min_value": 0.38159371492704824
+        "max_value": 0.3923444976076555,
+        "min_value": 0.3923444976076555
       },
       "meta": {}
     },
@@ -745,7 +604,8 @@
           3,
           4,
           5,
-          6
+          6,
+          9
         ]
       },
       "meta": {}
@@ -761,8 +621,8 @@
       "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
       "kwargs": {
         "column": "Parch",
-        "max_value": 0.007856341189674524,
-        "min_value": 0.007856341189674524
+        "max_value": 0.019138755980861243,
+        "min_value": 0.019138755980861243
       },
       "meta": {}
     },
@@ -815,8 +675,8 @@
       "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
       "kwargs": {
         "column": "Ticket",
-        "max_value": 0.7643097643097643,
-        "min_value": 0.7643097643097643
+        "max_value": 0.868421052631579,
+        "min_value": 0.868421052631579
       },
       "meta": {}
     },
@@ -863,8 +723,8 @@
       "expectation_type": "expect_column_mean_to_be_between",
       "kwargs": {
         "column": "Fare",
-        "max_value": 32.204207968574636,
-        "min_value": 32.204207968574636
+        "max_value": 35.627188489208635,
+        "min_value": 35.627188489208635
       },
       "meta": {}
     },
@@ -892,8 +752,8 @@
           ],
           "value_ranges": [
             [
-              7.225,
-              7.225
+              7.2292,
+              7.2292
             ],
             [
               7.8958,
@@ -904,12 +764,12 @@
               14.4542
             ],
             [
-              31.0,
-              31.0
+              31.5,
+              31.5
             ],
             [
-              110.8833,
-              110.8833
+              151.55,
+              151.55
             ]
           ]
         }
@@ -919,7 +779,8 @@
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
-        "column": "Fare"
+        "column": "Fare",
+        "mostly": 0.99
       },
       "meta": {}
     },
@@ -927,8 +788,8 @@
       "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
       "kwargs": {
         "column": "Fare",
-        "max_value": 0.2783389450056117,
-        "min_value": 0.2783389450056117
+        "max_value": 0.4052757793764988,
+        "min_value": 0.4052757793764988
       },
       "meta": {}
     },
@@ -962,7 +823,7 @@
       "expectation_type": "expect_column_values_to_be_null",
       "kwargs": {
         "column": "Cabin",
-        "mostly": 0.77
+        "mostly": 0.78
       },
       "meta": {}
     },
@@ -970,8 +831,8 @@
       "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
       "kwargs": {
         "column": "Cabin",
-        "max_value": 0.7205882352941176,
-        "min_value": 0.7205882352941176
+        "max_value": 0.8351648351648352,
+        "min_value": 0.8351648351648352
       },
       "meta": {}
     },
@@ -1011,8 +872,7 @@
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
-        "column": "Embarked",
-        "mostly": 0.99
+        "column": "Embarked"
       },
       "meta": {}
     },
@@ -1020,8 +880,8 @@
       "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
       "kwargs": {
         "column": "Embarked",
-        "max_value": 0.003374578177727784,
-        "min_value": 0.003374578177727784
+        "max_value": 0.007177033492822967,
+        "min_value": 0.007177033492822967
       },
       "meta": {}
     },
@@ -1052,12 +912,12 @@
     "citations": [
       {
         "batch_request": {
-          "data_asset_name": "train.csv",
+          "data_asset_name": "test.csv",
           "data_connector_name": "default_inferred_data_connector_name",
-          "datasource_name": "titanic-train",
+          "datasource_name": "titanic-test",
           "limit": 1000
         },
-        "citation_date": "2022-08-27T07:07:51.271642Z",
+        "citation_date": "2022-08-27T08:07:41.268492Z",
         "comment": "Created suite added via CLI"
       }
     ],
@@ -1090,9 +950,6 @@
         "description": ""
       },
       "SibSp": {
-        "description": ""
-      },
-      "Survived": {
         "description": ""
       },
       "Ticket": {
