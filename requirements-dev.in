@@ -13,3 +13,4 @@ streamlit-pandas-profiling
 watchdog
 sklearn-pandas
 # neuraxle
+great-expectations
