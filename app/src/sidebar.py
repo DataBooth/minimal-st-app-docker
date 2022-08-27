@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-
+from config import settings
 
 def list_diff(list1, list2):
     return sorted(list(set(list1).symmetric_difference(set(list2))))
@@ -11,6 +11,13 @@ def create_sidebar(columns, target="Survived"):
 
     feat_all = sorted(list(columns))
     feat_all.remove(target)    # remove target variable from features
+
+    dropped_column = sorted(settings.DROPPED_COLUMN)
+    feat_all = list_diff(feat_all, dropped_column)
+
+
+    st.sidebar.markdown("#### Columns dropped:")
+    st.sidebar.markdown(f"_{', '.join(dropped_column)}_")
 
     # Initialise state variables for selected & discard features
 
