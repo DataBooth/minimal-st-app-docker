@@ -19,11 +19,13 @@ create_sidebar(train.columns)
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Data", "Profiling", "Exploration", "Expectations", "Governance"])
 
 with tab1:
+    render_markdown_file(Path.cwd()/"docs/meta_data.md")
     st.markdown(train.info())
     st.write(train.describe())
 
 
 with tab2:
+    st.markdown("Data profiling for the selected columns (features) for the **Train** and **Test** data")
     tab2_train, tab2_test = st.tabs(["Train", "Test"])
     with tab2_train:
         st_profile_report(create_data_profile(train[st.session_state.feat_select]))

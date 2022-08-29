@@ -14,6 +14,9 @@ Of course, "better" models exist (depending on your definition of "better"), how
 ### Logistic regression
 
 
+### Fit score
+
+
 
 ### scikit-learn framework and pipelines
 

@@ -1,8 +1,10 @@
 dynaconf
-pandas
-seedir
-streamlit
-watchdog
-streamlit-pandas-profiling
-pandas-profiling
 httpx
+pandas
+pandas-profiling
+seedir
+sklearn
+streamlit
+streamlit-pandas-profiling
+watchdog
+millify

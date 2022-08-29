@@ -7,12 +7,15 @@ def list_diff(list1, list2):
 
 
 def create_sidebar(columns, target="Survived"):
+    st.sidebar.markdown("**Below choose the columns (features) you wish to include/exclude from the analysis.**")
+    st.sidebar.markdown("###")
     st.sidebar.subheader("Column (Feature) selection:")
+
 
     feat_all = sorted(list(columns))
     feat_all.remove(target)    # remove target variable from features
 
-    dropped_column = sorted(settings.DROPPED_COLUMN)
+    dropped_column = sorted(settings.DROPPED_COLUMN)   # See settings.toml
     feat_all = list_diff(feat_all, dropped_column)
 
 
