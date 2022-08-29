@@ -11,6 +11,10 @@ For the purpose of this exercise we are only using a simple logistic regression 
 
 Of course, "better" models exist (depending on your definition of "better"), however in this case we are holding the model constant and trying to understand the impact of changes to the data inputs (from data with known errors) to an improved (though still not necessarily correct) dataset.
 
+### Logistic regression
+
+
+
 ### scikit-learn framework and pipelines
 
 The [`sklearn`](https://scikit-learn.org) (scikit-learn) machine learning package has been around for over 15 years.
