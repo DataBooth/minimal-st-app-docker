@@ -2,6 +2,7 @@
 
 #### Columns / Features of the dataset
 
+```
 0. PassengerId - index in the dataset
 1. Survived - Survival (0 = No; 1 = Yes)
 2. Pclass - Passenger Class (1 = 1st; 2 = 2nd; 3 = 3rd)
@@ -14,3 +15,4 @@
 9. Fare - Passenger Fare
 10. Cabin
 11. Embarked - Port of Embarkation (C = Cherbourg; Q = Queenstown; S = Southampton)
+```

@@ -119,6 +119,7 @@ joblib==1.1.0
     # via
     #   pandas-profiling
     #   phik
+    #   scikit-learn
 jsonschema==4.10.0
     # via
     #   altair
@@ -157,6 +158,8 @@ matplotlib-inline==0.1.5
     # via
     #   ipykernel
     #   ipython
+millify==0.1.1
+    # via -r requirements-deploy.in
 missingno==0.5.1
     # via pandas-profiling
 mistune==0.8.4
@@ -198,6 +201,7 @@ numpy==1.23.2
     #   pyarrow
     #   pydeck
     #   pywavelets
+    #   scikit-learn
     #   scipy
     #   seaborn
     #   streamlit
@@ -299,12 +303,15 @@ rfc3986[idna2008]==1.5.0
     # via httpx
 rich==12.5.1
     # via streamlit
+scikit-learn==1.1.2
+    # via sklearn
 scipy==1.9.0
     # via
     #   imagehash
     #   missingno
     #   pandas-profiling
     #   phik
+    #   scikit-learn
     #   seaborn
 seaborn==0.11.2
     # via
@@ -322,6 +329,8 @@ six==1.16.0
     #   bleach
     #   imagehash
     #   python-dateutil
+sklearn==0.0
+    # via -r requirements-deploy.in
 smmap==5.0.0
     # via gitdb
 sniffio==1.2.0
@@ -345,6 +354,8 @@ tangled-up-in-unicode==0.2.0
     #   visions
 terminado==0.15.0
     # via notebook
+threadpoolctl==3.1.0
+    # via scikit-learn
 tinycss2==1.1.1
     # via nbconvert
 toml==0.10.2
