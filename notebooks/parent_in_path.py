@@ -7,4 +7,4 @@ def add_parent_to_path():
     if module_path not in sys.path:
         sys.path.append(module_path)
     
-    print(sys.path)
+    return sys.path
