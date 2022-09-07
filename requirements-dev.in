@@ -16,3 +16,4 @@ sklearn-pandas
 great-expectations
 prefect-great-expectations
 millify
+openpyxl
