@@ -250,7 +250,6 @@ ax.set_xlim(0,80);
 
 ```
 
-
     
 ![png](eda_titanic_data_files/eda_titanic_data_9_0.png)
     

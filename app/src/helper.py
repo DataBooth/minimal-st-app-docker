@@ -6,24 +6,28 @@ from IPython.display import Markdown, display
 from streamlit import cache, markdown
 
 
-def read_markdown_file(markdown_file):
+def read_markdown_file(markdown_file, png_url):
     try:
-        return Path(markdown_file).read_text()
+        text = Path(markdown_file).read_text()
+        if png_url is not None:
+            text = text.replace("eda_titanic_data_files", png_url)
+        return text
     except Exception as IOError:
         raise(IOError)
 
 
+
 @cache
-def st_read_markdown_file(markdown_file):
-    return read_markdown_file(markdown_file)
+def st_read_markdown_file(markdown_file, png_url):
+    return read_markdown_file(markdown_file, png_url)
 
 
-def render_markdown_file(markdown_file, output="streamlit"):
+def render_markdown_file(markdown_file, png_url=None, output="streamlit"):
     if output == "jupyter":
         md_text = read_markdown_file(markdown_file)
         display(Markdown(md_text))
     else:
-        md_text = st_read_markdown_file(markdown_file)
+        md_text = st_read_markdown_file(markdown_file, png_url)
         markdown(md_text, unsafe_allow_html=True)
     return
 

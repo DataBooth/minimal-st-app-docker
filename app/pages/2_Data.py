@@ -35,7 +35,8 @@ with tab2:
 
 with tab3:
     render_markdown_file(Path.cwd()/"docs/eda_titanic_background.md")
-    render_markdown_file(Path.cwd()/"docs/nbconvert/eda_titanic_data.md")
+    render_markdown_file(Path.cwd()/"docs/nbconvert/eda_titanic_data.md", 
+        png_url="https://github.com/Mjboothaus/titanic/raw/main/docs/nbconvert/eda_titanic_data_files")
 
 
 with tab4: 

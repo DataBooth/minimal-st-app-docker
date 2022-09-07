@@ -5,6 +5,8 @@
 .vscode
 !.vscode/launch.json
 .secrets.toml
+.DS_Store
+Dockerfile
 
 
 # Byte-compiled / optimized / DLL files
