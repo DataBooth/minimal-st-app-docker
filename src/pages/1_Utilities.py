@@ -2,8 +2,8 @@ from pathlib import Path
 
 import streamlit as st
 from Main import APP_TITLE
-from src.helper import get_system_info
-from src.sidebar import create_sidebar_utilities
+from helper import get_system_info
+#from src.sidebar import create_sidebar_utilities
 from seedir import seedir
 
 ITEM_LIMIT = 50
@@ -25,8 +25,6 @@ def create_page_0_tab_2():
                      exclude_folders=exclude_folders)
   st.code(f"Exclude directory(s): {', '.join(exclude_folders)}")
   st.code(dir_str)
-
-  create_sidebar_utilities()
 
 
 TAB_NAMES = ["System Info", "Directory structure"]

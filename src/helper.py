@@ -3,7 +3,7 @@ from pathlib import Path
 
 import httpx
 from IPython.display import Markdown, display
-from streamlit import cache, markdown
+from streamlit import cache_data, markdown
 
 
 def read_markdown_file(markdown_file, png_url):
@@ -17,7 +17,7 @@ def read_markdown_file(markdown_file, png_url):
 
 
 
-@cache
+@cache_data
 def st_read_markdown_file(markdown_file, png_url):
     return read_markdown_file(markdown_file, png_url)
 

@@ -1,0 +1,21 @@
+[tool.pdm]
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Michael Booth", email = "michael@databooth.com.au"},
+]
+dependencies = [
+    "streamlit>=1.20.0",
+    "watchdog>=3.0.0",
+    "notebook>=6.5.3",
+    "httpx>=0.23.3",
+    "dynaconf>=3.1.12",
+    "setuptools>=67.6.1",
+    "seedir>=0.4.2",
+    "emoji>=2.2.0",
+]
+requires-python = ">=3.10"
+license = {text = "MIT"}

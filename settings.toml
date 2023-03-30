@@ -1,7 +1,3 @@
-APP_TITLE = "Titanic App"
+APP_TITLE = "Minimal Streamlit Docker Deploy Utility App"
 SUB_TITLE = ""
 APP_ABOUT = "Created with love & care at DataBooth - www.databooth.com.au"
-
-# Data source
-
-DROPPED_COLUMN = ["Fare", "Cabin", "PassengerId", "Ticket", "Name"]

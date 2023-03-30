@@ -2,14 +2,12 @@
 
 import os
 from pathlib import Path
-import pandas as pd
 
 import streamlit as st
 
 from config import settings
-from src.helper import render_markdown_file
-from src.sidebar import create_sidebar
-from src.datasource import load_data
+from helper import render_markdown_file
+# from src.sidebar import create_sidebar
 
 # from helper_functions import read_render_markdown_file
 
@@ -45,10 +43,6 @@ def create_app_header(app_title, subtitle=None):
 
 
 create_app_header(APP_TITLE, SUB_TITLE)
-
-train_df, test_df = load_data()
-
-create_sidebar(train_df.columns)
 
 render_markdown_file(Path.cwd()/"docs/Main.md")
 
